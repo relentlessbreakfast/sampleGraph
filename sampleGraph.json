@@ -1,0 +1,50 @@
+[
+	{
+		"nodeId": 0,
+		"parentCluster": "sampleCluster",
+		"type": "entry",
+		"downstream": [1, 2]
+	},
+	{
+		"nodeId": 1,
+		"parentCluster": "sampleCluster",
+		"type": "cluster",
+		"name": "Database Schema",
+		"abbrev": "DbSch",
+		"upstream": [0],
+		"downstream": [3, 4]
+	},
+	{
+		"nodeId": 2,
+		"parentCluster": "sampleCluster",
+		"type": "issue",
+		"name": "Add O-auth",
+		"issueNumber": "10",
+		"upstream": [0],
+		"downstream": [3, 4]
+	},
+	{
+		"nodeId": 3,
+		"parentCluster": "sampleCluster",
+		"type": "cluster",
+		"name": "Repo Selection Screen",
+		"abbrev": "RpSel",
+		"upstream": [1, 2],
+		"downstream": [5]
+	},
+	{
+		"nodeId": 4,
+		"parentCluster": "sampleCluster",
+		"type": "issue",
+		"name": "Make Sample Graph Data",
+		"issueNumber": "11",
+		"upstream": [1, 2],
+		"downstream": [5]
+	},
+	{
+		"nodeId": 5,
+		"parentCluster": "sampleCluster",
+		"type": "exit",
+		"upstream": [3, 4],
+	}
+]
